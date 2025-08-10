@@ -24,18 +24,21 @@ pip install dnd-campaign-assistant
 ## Usage
 
 1. Start Ollama with your preferred model:
+
 ```bash
 ollama serve
 ollama pull qwen3:8b  # or your preferred model
 ```
 
-2. Run the campaign assistant:
+1. Run the campaign assistant:
+
 ```bash
 dnd-assistant init  # Initialize data directory
 dnd-assistant generate --kind npc --random  # Generate a random NPC
 ```
 
-3. Or start the web UI:
+1. Or start the web UI:
+
 ```bash
 streamlit run -m dnd_campaign_assistant.app
 ```
@@ -45,7 +48,7 @@ streamlit run -m dnd_campaign_assistant.app
 The assistant can be configured through environment variables:
 
 - `MODEL`: The Ollama model to use (default: qwen3:8b)
-- `OLLAMA_HOST`: The Ollama server URL (default: http://localhost:11434)
+- `OLLAMA_HOST`: The Ollama server URL (default: <http://localhost:11434>)
 - `OLLAMA_KEY`: Optional API key for Ollama authentication
 
 ## Documentation

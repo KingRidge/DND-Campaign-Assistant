@@ -148,7 +148,7 @@ REQUIREMENTS:
 5. Follow markdown formatting exactly"""
 
     try:
-        from campaign_assistant import llm_chat_ollama
+        from .llm_utils import llm_chat_ollama
 
         content = llm_chat_ollama(
             [
@@ -212,7 +212,7 @@ REQUIREMENTS:
 Format your response in clean markdown with clear headers and sections."""
 
     try:
-        from campaign_assistant import llm_chat_ollama
+        from .llm_utils import llm_chat_ollama
 
         content = llm_chat_ollama(
             [
@@ -271,7 +271,7 @@ REQUIREMENTS:
 Format your response in clean markdown with clear headers and sections."""
 
     try:
-        from campaign_assistant import llm_chat_ollama
+        from .llm_utils import llm_chat_ollama
 
         content = llm_chat_ollama(
             [
