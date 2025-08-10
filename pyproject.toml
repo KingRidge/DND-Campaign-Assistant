@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "dnd_campaign_assistant/_version.py"
+
+[project]
+name = "dnd-campaign-assistant"
+dynamic = ["version"]
+description = "A D&D campaign assistant with AI-powered content generation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Ridge", email = "your.email@example.com"},
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/dnd-campaign-assistant"

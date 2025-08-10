@@ -1,0 +1,17 @@
+{
+  "players": [],
+  "npcs": [],
+  "locations": [],
+  "items": [],
+  "quests": [],
+  "timeline": [],
+  "rules": {
+    "house_rules": [],
+    "sources": []
+  },
+  "_meta": {
+    "created": "2025-08-09T20:48:16Z",
+    "updated": "2025-08-09T20:48:16Z",
+    "version": 1
+  }
+}
