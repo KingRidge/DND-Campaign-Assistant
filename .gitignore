@@ -40,3 +40,6 @@ data/notes/*
 !data/locations/.gitkeep
 !data/scenes/.gitkeep
 !data/notes/.gitkeep
+
+# Generated version file
+dnd_campaign_assistant/_version.py
