@@ -75,7 +75,16 @@ def main():
             key=get_unique_key("ollama_host_input")
         )
 
-        model = (model_name, ollama_host, os.getenv("OLLAMA_KEY", ""))
+        # Ollama API key (optional)
+        ollama_key = st.text_input(
+            "Ollama API Key (Optional)",
+            value=os.getenv("OLLAMA_KEY", ""),
+            type="password",
+            help="API key for authentication with remote Ollama servers (leave empty for local servers)",
+            key=get_unique_key("ollama_key_input")
+        )
+
+        model = (model_name, ollama_host, ollama_key)
         
         # Debug information
         st.subheader("Debug Info")
@@ -85,11 +94,12 @@ def main():
         if st.button("🔍 Test Ollama Connection", key=get_unique_key("test_ollama_button")):
             try:
                 import requests
-                response = requests.get(f"{ollama_host}/api/tags", timeout=5)
+                ollama_headers = {"Authorization": f"Bearer {ollama_key}"} if ollama_key else {}
+                response = requests.get(f"{ollama_host}/api/tags", timeout=5, headers=ollama_headers)
                 if response.status_code == 200:
                     models = response.json().get("models", [])
                     st.success(f"✅ Connected! Available models: {len(models)}")
-                    for model_info in models[:3]:  # Show first 3 models
+                    for model_info in models[:10]:  # Show first 10 models
                         st.write(f"- {model_info.get('name', 'Unknown')}")
                 else:
                     st.error(f"❌ HTTP {response.status_code}")
