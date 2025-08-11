@@ -1,0 +1,5 @@
+include README.md
+include requirements.txt
+recursive-include dnd_campaign_assistant/data *.json
+recursive-include dnd_campaign_assistant/data *.md
+recursive-include dnd_campaign_assistant/data *.txt

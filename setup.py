@@ -10,12 +10,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="dnd-campaign-assistant",
-    version="0.1.0",
-    author="Ridge",
+    # version is handled by setuptools_scm
+    author="KingRidge",
     description="A D&D campaign assistant with AI-powered content generation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/dnd-campaign-assistant",
+    url="https://github.com/KingRidge/dnd-campaign-assistant",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -42,7 +42,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "dnd-assistant=campaign_assistant:main",
+            "dnd-assistant=dnd_campaign_assistant.campaign_assistant:main",
         ],
     },
 )
